@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--batchsize', default=1, type=int, help='batch_size')
-    parser.add_argument('--vrdroot', type=str, default='data/spall/')
+    parser.add_argument('--vrdroot', type=str, default='datasets/sp3000/')
 
     args = parser.parse_args()
 

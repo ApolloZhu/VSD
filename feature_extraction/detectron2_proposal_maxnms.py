@@ -19,6 +19,7 @@ from detectron2.engine import DefaultPredictor
 
 D2_ROOT = os.path.dirname(os.path.dirname(detectron2.__file__))  # Root of detectron2
 # DATA_ROOT = os.getenv('COCO_IMG_ROOT', '/ssd-playpen/data/mscoco/images/')
+D2_ROOT = "."
 MIN_BOXES = 36
 MAX_BOXES = 36
 NUM_OBJECTS = 36
@@ -26,6 +27,7 @@ DIM = 2048
 
 # Load VG Classes
 data_path = 'demo/data/genome/1600-400-20'
+data_path = 'datasets/vg'
 
 vg_classes = []
 with open(os.path.join(D2_ROOT, data_path, 'objects_vocab.txt')) as f:

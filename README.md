@@ -36,6 +36,14 @@ python -c "import language_evaluation; language_evaluation.download('coco')"
 ```bash
 # Store images, features, and annotations
 ./datasets
+  /spall
+    /images
+      all images from VG and SP
+    test.json, train.json, val.json                           <= from dataset VSDv2
+  /sp3000
+    /features
+      vrd_box36.h5                                            <= run feature_extraction/sp_proposal.py
+  
 
 # Image feature extraction
 ./feature_extraction
@@ -48,7 +56,8 @@ python -c "import language_evaluation; language_evaluation.download('coco')"
         param.py                                              <= (argparse) configuration
         tokenization.py                                       <= custom tokenizer
         utils.py, dist_utils.py                               <= utility functions
-    snap/                                                     <= store weight checkpoints
+
+snap/                                                         <= store weight checkpoints
 ```
 
 
@@ -62,7 +71,7 @@ gdrive download 1_SBj4sZ0gUqfBon1gFBiNRAmfHv5w_ph --recursive
 ## Run
 ```bash
 bash ./baseline.sh gpu_num
-bash ./end2end.sh gpu_num
+bash ./end2end.sh gpu_num output
 ```
 
 ## Acknowledgement

@@ -2,11 +2,11 @@ utput=snap/sp/baseline
 PYTHONPATH=$PYTHONPATH:./src \
 python -m torch.distributed.launch \
     --nproc_per_node=$1 \
-    src/vrd_caption.py \
+    VLModel/src/vrd_caption.py \
         --distributed --multiGPU \
-        --train karpathy_train \
-        --valid karpathy_val \
-        --test karpathy_test \
+        --train train \
+        --valid val \
+        --test test \
         --optim adamw \
         --warmup_ratio 0.1 \
         --clip_grad_norm 5 \
